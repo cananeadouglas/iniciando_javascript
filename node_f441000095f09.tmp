@@ -1,0 +1,3 @@
+var hora = new Date()
+console.log(hora.getHours)
+
