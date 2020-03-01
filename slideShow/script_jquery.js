@@ -1,0 +1,27 @@
+$(function(){
+    $('#l1').click(function(){
+        $('#1').show();
+        $('#2').hide();
+        $('#3').hide();
+        $('#4').hide();
+    });
+    $('#l2').click(function(){
+        $('#1').hide();
+        $('#2').show();
+        $('#3').hide();
+        $('#4').hide();
+    });
+    $('#l3').click(function(){
+        $('#1').hide();
+        $('#2').hide();
+        $('#3').show();
+        $('#4').hide();
+    });
+    $('#l4').click(function(){
+        $('#1').hide();
+        $('#2').hide();
+        $('#3').hide();
+        $('#4').show();
+    });
+});
+
