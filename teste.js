@@ -19,3 +19,9 @@ function DezSegundos(){
     console.log("Já temos dez segundos.")
 }
 setTimeout(DezSegundos, 60000) 
+
+var data = new Date()
+var hora = data.getHours()
+var min = data.getMinutes()
+let diasemana = data.getDay();
+console.log(diasemana)
