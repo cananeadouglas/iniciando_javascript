@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printando Endereço</title>
+</head>
+<body>
+     
+        <h4>Digite aqui 2 numeros diferentes para serem mostrados o numeros pares entre eles</h4>
+        
+        <input type="number" id="numero01" name="numero01"> 
+        <input type="number" id="numero02" name="numero02">
+
+        <input type="button" value="SoosPares" onmouseover="numerospares()">
+        <div id="par">dados aqui</div> 
+        <br><br>
+
+    <script>
+
+        function numerospares() {
+
+            let numero01 = window.document.getElementById('numero01')
+            let numero02 = window.document.getElementById('numero02')
+
+            let tran01 = Number(numero01.value)
+            let tran02 = Number(numero02.value)
+
+            let par = window.document.getElementById('par')
+            
+            if (tran01 < tran02) {
+                par.innerHTML = " ";
+                for (i = tran01; i <= tran02; i++){
+                    if (i % 2 == 0) {
+                        
+                        par.innerHTML += `${i} + `
+                    }
+                }
+
+            } else if (tran01 > tran02) {
+                par.innerHTML = " ";
+                for (i = tran02; i <= tran01; i++){
+                    if (i % 2 == 0) {
+                        
+                        par.innerHTML += `${i} + `
+                    }
+                }
+
+            } else {
+                par.innerHTML = "São valores iguais. digite valores diferentes."
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
