@@ -39,24 +39,8 @@ dados.then(function(resposta){
 */
 
 function manda(){
-
-    let casos = window.document.getElementById('casos')
-    let mortes = window.document.getElementById('mortes')
-    let recupera = window.document.getElementById('recupera')
-    document.body.style.background = '#e7ca0f'
-    let pais = "Brazil"
-
-    axios.get('https://corona.lmao.ninja/all')
-        .then(function(response){
-            let chega = console.log(response.data);
-            casos.innerHTML = `Casos confirmados: ${response.data.cases}`
-            mortes.innerHTML = `Números de mortos: ${response.data.deaths}`
-            recupera.innerHTML = `Pessoas recuperadas: ${response.data.recovered}`  
-        })
-        .catch(function(error) {
-            console.warn(error);
-        })
-        
+  
+        let pais = window.document.getElementById('pais')
         let titulo = window.document.getElementById('titulo')
         let casos1 = window.document.getElementById('casos1')
         let mortes1 = window.document.getElementById('mortes1')
@@ -69,26 +53,10 @@ function manda(){
             console.log(response);
            
                 for(i = 0; i <= 99; i++){
-                    if (pais == response.data[i].country){
+                    if (pais.value == response.data[i].country){
                         console.log(pais)
-                        titulo.innerHTML = `Números do Coronavirus ${response.data[i].country}`
+                        titulo.innerHTML = `Números do Coronavirus no: ${response.data[i].country}`
                         casos1.innerHTML = `Casos confirmados: ${response.data[i].cases}`
-                        casos1.addEventListener('click', clicar)
-                        casos1.addEventListener('mouseenter', entrar)
-                        casos1.addEventListener('mouseout', sair)
-
-                        function clicar() {
-                            casos1.innerText = 'clicou!'
-                            casos1.style.background = 'red'
-                        }
-                        function entrar() {
-                            casos1.innerText = 'Entrou!'
-                        }
-                        function sair() {
-                            casos1.innerText = 'Saiu!'
-                            casos1.style.background = 'green'
-                        }
-
                         mortes1.innerHTML = `Número de mortos: ${response.data[i].deaths}`
                         recupera1.innerHTML = `Pessoas recuperadas: ${response.data[i].recovered}`
                         ativos.innerHTML = `Pessoas ativas: ${response.data[i].active}`

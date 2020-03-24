@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META HTTP-EQUIV="REFRESH" CONTENT="120";>
+    <title>FaceHora</title>
+    <title>CoronaVirus API</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Números do Coronavirus no Mundo</h1>
+    </header>
+    <section>
+        <div id="casos">
+        </div>
+        <div id="mortes">
+        </div>
+        <div id="recupera">
+        </div>
+    </section>
+  
+    <header>
+        <input type="text" id="pais">
+        <input type="submit" value="Buscar" onclick="manda()">
+        <br/>
+        <h1 id="titulo">Números do Coronavirus no Brasil</h1>
+    </header>
+    <section>
+        <div id="casos1">
+        </div>
+        <div id="mortes1">
+        </div>
+        <div id="recupera1">
+        </div>
+        <div id="ativos">
+        </div>
+        <div id="criticos">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; API corona.lmao.ninja by cananeadouglas</p>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
