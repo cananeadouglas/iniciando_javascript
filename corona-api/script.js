@@ -36,6 +36,9 @@ dados.then(function(resposta){
     }
 })
 
+
+documentação
+https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#81415d42-eb53-4a85-8484-42d2349debfe
 */
 
 function manda(){
@@ -46,7 +49,7 @@ function manda(){
     document.body.style.background = '#e7ca0f'
     let pais = "Brazil"
 
-    axios.get('https://corona.lmao.ninja/all')
+    axios.get('http://coronavirus-19-api.herokuapp.com/all')
         .then(function(response){
             let chega = console.log(response.data);
             casos.innerHTML = `Casos confirmados: ${response.data.cases}`
@@ -64,32 +67,18 @@ function manda(){
         let ativos = window.document.getElementById('ativos')
         let criticos = window.document.getElementById('criticos')
 
-        axios.get('https://corona.lmao.ninja/countries')
+        axios.get('http://coronavirus-19-api.herokuapp.com/countries')
             .then(function(response){
             console.log(response);
            
                 for(i = 0; i <= 99; i++){
                     if (pais == response.data[i].country){
                         console.log(pais)
-                        titulo.innerHTML = `Números do Coronavirus ${response.data[i].country}`
-                        casos1.innerHTML = `Casos confirmados: ${response.data[i].cases}`
-                        casos1.addEventListener('click', clicar)
-                        casos1.addEventListener('mouseenter', entrar)
-                        casos1.addEventListener('mouseout', sair)
-
-                        function clicar() {
-                            casos1.innerText = 'clicou!'
-                            casos1.style.background = 'red'
-                        }
-                        function entrar() {
-                            casos1.innerText = 'Entrou!'
-                        }
-                        function sair() {
-                            casos1.innerText = 'Saiu!'
-                            casos1.style.background = 'green'
-                        }
-
-                        mortes1.innerHTML = `Número de mortos: ${response.data[i].deaths}`
+                        titulo.innerHTML = `Números do Coronavirus: ${response.data[i].country}`
+                        casos1.innerHTML = `Casos confirmados: ${response.data[i].cases}<br>`
+                        casos1.innerText += `Casos novos por dia: ${response.data[i].todayCases}`
+                        mortes1.innerHTML = `Número de mortos: ${response.data[i].deaths}<br>`
+                        mortes1.innerText += `Mortes no dia de hoje: ${response.data[i].todayDeaths}`
                         recupera1.innerHTML = `Pessoas recuperadas: ${response.data[i].recovered}`
                         ativos.innerHTML = `Pessoas ativas: ${response.data[i].active}`
                         criticos.innerHTML = `Casos criticos: ${response.data[i].critical}`
@@ -106,3 +95,24 @@ function manda(){
         })
 
 }
+
+
+/*
+
+casos1.addEventListener('click', clicar)
+casos1.addEventListener('mouseenter', entrar)
+casos1.addEventListener('mouseout', sair)
+
+function clicar() {
+casos1.innerText = 'clicou!'
+casos1.style.background = 'red'
+}
+function entrar() {
+casos1.innerText = 'Entrou!'
+}
+function sair() {
+casos1.innerText = 'Saiu!'
+casos1.style.background = 'green'
+}
+
+*/
