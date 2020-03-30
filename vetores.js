@@ -44,3 +44,7 @@ let num = [5,9,8.12,4,3]
 
 let ranndnd = Math.floor(Math.random() * num)
 console.log(ranndnd)
+
+for(i = 0; i <= 99; i++){
+    console.log(i)
+}

@@ -8,7 +8,7 @@
     <title>CoronaVirus API</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body onload="sovem()">
     <header>
         <h1>Números do Coronavirus no Mundo</h1>
     </header>
@@ -19,13 +19,15 @@
         </div>
         <div id="recupera">
         </div>
+        <p>Pesquisar pais em inglês <input type="text" name="pais" id="pais"></p>
+        <input type="submit" value="Pesquisar" onclick="manda()">
+        <input type="submit" value="Passar mouse em cima"  name="exemplo" id="exemplo" onmouseover="exemplo()">
+        <p style="font-size: 13px;" id="exemplot"></p>
     </section>
   
     <header>
-        <input type="text" id="pais">
-        <input type="submit" value="Buscar" onclick="manda()">
         <br/>
-        <h1 id="titulo">Números do Coronavirus no Brasil</h1>
+        <h1 id="titulo">Números do Coronavirus no...</h1>
     </header>
     <section>
         <div id="casos1">
