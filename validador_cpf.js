@@ -1,27 +1,24 @@
+function mandar(){
 
-var stringExemplo = "12345678900";
-var resultado = stringExemplo.substring(0, 10);
+    var cpfd = window.document.getElementById('cpfaqui')
+    var bemaqui = window.document.getElementById('bem')
+    var cpf = Number(cpfd.value)
+    
+    var resultado = cpfd
+    //.substring(0, 10)
 
-var a = stringExemplo.substring(0,1)
-var b = stringExemplo.substring(1,2)
-var c = stringExemplo.substring(2,3)
-var d = stringExemplo.substring(3,4)
-var e = stringExemplo.substring(4,5)
-var f = stringExemplo.substring(5,6)
-var g = stringExemplo.substring(6,7)
-var h = stringExemplo.substring(7,8)
-var i = stringExemplo.substring(8,9)
-var j = stringExemplo.substring(9,10)
-var l = stringExemplo.substring(10,11)
+    var a = resultado.substring(0,1)
+    var b = resultado.substring(1,2)
+    var c = resultado.substring(2,3)
+    var d = resultado.substring(3,4)
+    var e = resultado.substring(4,5)
+    var f = resultado.substring(5,6)
+    var g = resultado.substring(6,7)
+    var h = resultado.substring(7,8)
+    var i = resultado.substring(8,9)
+    var j = resultado.substring(9,10)
+    var l = resultado.substring(10,11)
 
-console.log(a)
-console.log(b)
-console.log(c)
-console.log(d)
-console.log(e)
-console.log(f)
-console.log(g)
-console.log(h)
-console.log(i)
-console.log(j)
-console.log(l)
+    bemaqui.innerHTML = `aqui vc pode + ${resultado} + dutod `
+
+}

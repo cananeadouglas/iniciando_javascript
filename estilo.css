@@ -1,15 +1,16 @@
 body{
     /* Cor de fundo background: blue; */
     font: normal 20px Arial;  /**/
+    background: darkgray;
 }
 
 header {
-    color: white;/*cor da fonte */
+    color: rgb(0, 0, 0);/*cor da fonte */
     text-align: center;/**/
 }
 
 section {
-    background: white;/*cor de fundo */
+    background: rgb(255, 255, 255);/*cor de fundo */
     border-radius: 15px;/*bordas arredondadas*/
     padding: 15px;/*espaço entre o texto e a borda*/
     width: 500px;/*largura*/

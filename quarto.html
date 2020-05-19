@@ -33,6 +33,7 @@
             var velo = window.document.querySelector('input#velocidade')
             var resultado = window.document.querySelector('div#resultado')
             var velox = Number(velo.value)
+            
             resultado.innerHTML = 'Sua velocidade atual é de '+ velox + 'Km/h, '
             if (velox > 60) {
                 resultado.innerHTML += ' </br>vc esta multado por excesso de velocidade'
