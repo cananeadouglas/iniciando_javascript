@@ -1,9 +1,11 @@
 function teste(){
 
+    
     var cpf = window.document.getElementById('cpfaqui').value;
     var mostrar = window.document.getElementById('repetir');
 
     if (cpf.length >= 11){
+        mostrar.innerHTML = ``
         //mostrar.innerHTML = `mostar aqui valores: ${cpf}`
         
         var a = cpf.substring(0,1)
@@ -35,15 +37,15 @@ function teste(){
         //mostrar.innerHTML = `${somatorio}`
 
         var resto01 = somatorio01 % 11;
-        mostrar.innerHTML += `${resto01} sim `
+        //mostrar.innerHTML += `${resto01} sim `
 
         var identificador01 = 11 - resto01; 
         
         if (identificador01 >= 10){
             identificador01 = 0
-            mostrar.innerHTML += `${identificador01} sim `
+            //mostrar.innerHTML += `${identificador01} sim `
         }else{
-            mostrar.innerHTML += `${identificador01} sim `
+            //mostrar.innerHTML += `${identificador01} sim `
         }
         
 
@@ -63,15 +65,15 @@ function teste(){
         var somatorio02 = ec01 + ec02 + ec03 + ec04 + ec05 + ec06 + ec07 + ec08 + ec09 + ec10 ;
 
         var resto02 = somatorio02 % 11;
-        mostrar.innerText += `${resto02} aqui `
+        //mostrar.innerText += `${resto02} aqui `
 
         var identificador02 = 11 - resto02;
 
         if (identificador02 >= 10){
             identificador02 = 0
-            mostrar.innerHTML += `${identificador02} sim `
+            //mostrar.innerHTML += `${identificador02} sim `
         }else{
-            mostrar.innerHTML += `${identificador02} sim `
+            //mostrar.innerHTML += `${identificador02} sim `
         }
 
         if (identificador01 == j && identificador02 == k){
