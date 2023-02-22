@@ -1,48 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Status Internet</title>
-
+    <title>Condições</title>
     <style>
-        .hidden{
-            display: none;
+        body{
+            font: normal 18pt Arial;
+            text-align: center;
+            background-color: red;
         }
-        #alerta{
-            background: red;
-            color: white;
-            text-transform: uppercase;
-            padding: 1rem;
+        input {
+            font: normal 20pt Arial;
+            width: 100px;
         }
-
     </style>
 </head>
 <body>
-    
-    <div id="alerta" class="hidden">
 
-        sua internet caiu
+    <h1>Sistema de multas do Detran</h1>
+    <input type="number" name="velocidade" id="velocidade">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="resultado">
+
 
     </div>
 
-</body>
-<script type="text/javascript" >
-    function updateInternetStatus(){
-        if (navigator.onLine) {
-            document.querySelector('#alerta').classList.add('hidden');
-            //alert('online')
-        }else{
-            document.querySelector('#alerta').classList.remove('hidden');
-            //alert('offline')
+    <script>
+
+        function verificar() {
+            var velo = window.document.querySelector('input#velocidade')
+            var resultado = window.document.querySelector('div#resultado')
+            var velox = Number(velo.value)
+            
+            resultado.innerHTML = 'Sua velocidade atual é de '+ velox + 'Km/h, '
+            if (velox > 60) {
+                resultado.innerHTML += ' </br>vc esta multado por excesso de velocidade'
+            }else{
+                resultado.innerHTML += ' </br>dirija bem com o cinto de segurança.'
+            }
+
         }
-
-    }
-
-    window.addEventListener('online', updateInternetStatus)
-    window.addEventListener('offline', updateInternetStatus)
-
-    updateInternetStatus()
-
-</script>
+    </script>
+</body>
 </html>
