@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Status Internet</title>
+
+    <style>
+        .hidden{
+            display: none;
+        }
+        #alerta{
+            background: red;
+            color: white;
+            text-transform: uppercase;
+            padding: 1rem;
+        }
+
+    </style>
 </head>
 <body>
-
-    <div id="level">
-        vc esta usando
-    </div>
     
+    <div id="alerta" class="hidden">
+
+        sua internet caiu
+
+    </div>
+
 </body>
+<script type="text/javascript" >
+    function updateInternetStatus(){
+        if (navigator.onLine) {
+            document.querySelector('#alerta').classList.add('hidden');
+            //alert('online')
+        }else{
+            document.querySelector('#alerta').classList.remove('hidden');
+            //alert('offline')
+        }
 
-<script>
-
-    var level = window.document.getElementById('level');
-
-    var sBrowser, sUsrAg = navigator.userAgent;
-
-    if(sUsrAg.indexOf("Chrome") > -1) {
-        sBrowser = "Google Chrome";
-    } else if (sUsrAg.indexOf("Safari") > -1) {
-        sBrowser = "Apple Safari";
-    } else if (sUsrAg.indexOf("Opera") > -1) {
-        sBrowser = "Opera";
-    } else if (sUsrAg.indexOf("Firefox") > -1) {
-        sBrowser = "Mozilla Firefox";
-    } else if (sUsrAg.indexOf("MSIE") > -1) {
-        sBrowser = "Microsoft Internet Explorer";
     }
 
-    level.innerHTML = `vc está usando o navegador ${sBrowser} `;
-    console.log("Você está utilizando: " + sBrowser);
+    window.addEventListener('online', updateInternetStatus)
+    window.addEventListener('offline', updateInternetStatus)
+
+    updateInternetStatus()
 
 </script>
 </html>
