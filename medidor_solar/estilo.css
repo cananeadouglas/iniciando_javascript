@@ -1,0 +1,24 @@
+body{
+    background: rgb(103, 186, 255);  /* Cor de fundo */
+    font: normal 15px ;  /**/
+}
+
+header {
+    color: rgb(0, 0, 0);/*cor da fonte */
+    text-align: center;/**/
+}
+
+section {
+    background: white;/*cor de fundo */
+    border-radius: 15px;/*bordas arredondadas*/
+    padding: 15px;/*espaço entre o texto e a borda*/
+    width: 500px;/*largura*/
+    margin: auto;/*centralizar a div no meio da tela*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);/* sobreamento e cor*/
+}
+
+footer {
+    color: white;/* cor da fonte */
+    text-align: center;/* centralizar texto*/
+    font-style: italic; /* fonte itálica */
+}

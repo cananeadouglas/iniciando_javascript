@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidor Solar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Medidor Solar</h1>
+    </header>
+    <section>
+        <div align="center">
+            <label>Defina o valor do equipamento</label><br>
+            <input type="range" id="range1" min="20000" max="30000" value="25000" step="500" >
+            <p>Equipamento: <span id="demo1"></span></p>
+            
+        </div>
+        <br>
+        <div align="center">
+            <label>Defina quantos meses vai pagar</label><br>
+            <input type="range" id="range2" min="12" max="60" value="50" step="1" width="30px" >
+            <p>Meses: <span id="demo2"></span></p>
+
+        </div>
+        <div align="center">
+            <h3>Divisão: R$ <span id="divisao"></span></h3>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Douglas Cananéa</p>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
