@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="level">
+        vc esta usando
+    </div>
+    
+</body>
+
+<script>
+
+    var level = window.document.getElementById('level');
+
+    var sBrowser, sUsrAg = navigator.userAgent;
+
+    if(sUsrAg.indexOf("Chrome") > -1) {
+        sBrowser = "Google Chrome";
+    } else if (sUsrAg.indexOf("Safari") > -1) {
+        sBrowser = "Apple Safari";
+    } else if (sUsrAg.indexOf("Opera") > -1) {
+        sBrowser = "Opera";
+    } else if (sUsrAg.indexOf("Firefox") > -1) {
+        sBrowser = "Mozilla Firefox";
+    } else if (sUsrAg.indexOf("MSIE") > -1) {
+        sBrowser = "Microsoft Internet Explorer";
+    }
+
+    level.innerHTML = `vc está usando o navegador ${sBrowser} `;
+    console.log("Você está utilizando: " + sBrowser);
+
+</script>
+</html>
