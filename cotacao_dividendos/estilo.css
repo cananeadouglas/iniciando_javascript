@@ -9,7 +9,7 @@ header {
 }
 
 section {
-    background: white;/*cor de fundo */
+    background: rgb(239, 243, 176);/*cor de fundo */
     border-radius: 15px;/*bordas arredondadas*/
     padding: 15px;/*espaço entre o texto e a borda*/
     width: 345px;/*largura*/
@@ -33,6 +33,7 @@ div {
 
 p {
     font-style: italic;
+
 }
 
 .ranges {
