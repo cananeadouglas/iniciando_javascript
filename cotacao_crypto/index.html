@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação Dividendos Futuros</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h2>Cotação de Dividendos Futuros</h2>
+    </header>
+    <section>
+        <div align="center">
+            <h4>Market Cap do Ativo</h4>
+            <input class="ranges" type="range" id="range1" min="10000000.00" max="10000000000.00" value="80000000.00" step="1000000.00" mask="1000000.00" >
+            <p>valor do market cap: <span id="demo1"></span></p>
+            
+        </div>
+        <br>
+        <div align="center">
+            <h4>Circulating Supply</h4>
+            <input class="ranges" type="range" id="range2" min="56000000.00" max="2000000000.00" value="56000000.00" step="20000000.00" >
+            <p>quantidade de tokens em circulação: <span id="demo2"></span></p>
+
+        </div>
+        
+        <br>
+        <div align="center">
+            <h3>Valor do Ativo: em Dolar $ <span id="divisao"></span></h3>
+        </div>
+    </section>
+    <footer>
+        <p>Douglas Cananéa</p>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
