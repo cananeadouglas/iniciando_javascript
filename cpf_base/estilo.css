@@ -1,5 +1,5 @@
 body{
-    background: cornsilk;  /* Cor de fundo */
+    background: rgb(248, 235, 180);  /* Cor de fundo */
     font: normal 19px ;  /**/
 }
 
@@ -13,21 +13,22 @@ section {
     color: darkgreen;
     border-radius: 15px;/*bordas arredondadas*/
     padding: 15px;/*espaço entre o texto e a borda*/
-    width: 500px;/*largura*/
+    width: 290px;/*largura*/
     margin: auto;/*centralizar a div no meio da tela*/
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);/* sobreamento e cor*/
 }
 
 footer {
-    color: white;/* cor da fonte */
+    color: rgb(0, 0, 0);/* cor da fonte */
     text-align: center;/* centralizar texto*/
     font-style: italic; /* fonte itálica */
 }
   
 input[type=submit] {
-    width: 490px;
+    align-content: center;
+    width: 95%;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -36,8 +37,9 @@ input[type=submit] {
 }
 
 input[type=number] {
-    width: 450px;
-    background-color: white;
+    align-content: center;
+    width: 82%;
+    background-color: rgb(156, 154, 154);
     color: black;
     padding: 14px 20px;
     margin: 8px 0;
@@ -51,3 +53,6 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
   
+label {
+    text-align: center;
+}
