@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Consultar CEP</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <section align="center"> 
+        <form>
+            <label for="cep"> Digite o CEP:</label><br><br>
+            <input type="text" id="cep" autofocus="true"><br><br>
+            <button type="button" onclick="buscarCEP()">Buscar CEP</button><br>
+        </form>
+    </section>
+    
+    <section align="center">
+        <div id="cepp"></div> <!-- elemento para exibir o resultado -->
+        
+        <div id="tipo"></div>
+
+        <div id="rua"></div>
+
+        <div id="endereco"></div>
+
+        <div id="bairro"></div>
+
+        <div id="city"></div>
+        
+        <div id="city_ibge"></div>
+        
+        <div id="ddd"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="script.js"></script>
+    </section>
+
+  </body>
+</html>
