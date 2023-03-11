@@ -8,7 +8,7 @@ function buscarCEP() {
     axios.get(endpoint).then(response => {
         
         const cepResultado = document.getElementById('cepp');
-        cepResultado.textContent = `CEP digitado: ${response.data.cep}`; // atribui o valor do CEP ao conteúdo do elemento
+        cepResultado.textContent = `CEP: ${response.data.cep}`; // atribui o valor do CEP ao conteúdo do elemento
         
         const tipo = document.getElementById('tipo');
         tipo.textContent = `Tipo: ${response.data.address_type}`;
@@ -22,11 +22,11 @@ function buscarCEP() {
         const city = document.getElementById('city');
         city.textContent = `Cidade: ${response.data.city}`;
 
-        const city_ibge = document.getElementById('city_ibge');
-        city_ibge.textContent = `Habitantes: ${response.data.city_ibge}`;
+        const estado = document.getElementById('estado');
+        estado.textContent = `Estado: ${response.data.state}`;
 
         const ddd = document.getElementById('ddd');
-        ddd.textContent = `ddd: ${response.data.ddd}`;
+        ddd.textContent = `DDD: ${response.data.ddd}`;
 
         const lat = document.getElementById('lat');
         lat.textContent = `Latitude: ${response.data.lat}`;
